@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.pane {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#employee-list {
+  border-right: 1px solid #ccc;
+}
+
+#list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#add-employee-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+#add-employee-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
