@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const employeeList = document.getElementById('list');
   const addEmployeeForm = document.getElementById('add-employee-form');
 
-  // Fetch and display employee list
   function fetchEmployees() {
       fetch('https://dummyjson.com/users')
           .then(response => response.json())
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
           .catch(error => console.error('Error fetching employees:', error));
   }
 
-  // Add employee
   addEmployeeForm.addEventListener('submit', function(event) {
       event.preventDefault();
       
@@ -40,11 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
           console.log('Employee added:', data);
           addEmployeeForm.reset();
-          fetchEmployees(); // Refresh employee list after adding new employee
+          fetchEmployees(); 
       })
       .catch(error => console.error('Error adding employee:', error));
   });
 
-  // Initial fetch
   fetchEmployees();
 });
